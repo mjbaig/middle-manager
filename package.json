@@ -1,0 +1,35 @@
+{
+  "name": "middle-manager",
+  "version": "1.0.0",
+  "description": "does something with a pool of webworkers. haven't thought it out.",
+  "main": "middle-manager.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "NODE_ENV=build rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "test": "mocha ./test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjbaig/middle-manager.git"
+  },
+  "keywords": [
+    "webworkers",
+    "middle",
+    "manager"
+  ],
+  "author": "Maz Baig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjbaig/middle-manager/issues"
+  },
+  "homepage": "https://github.com/mjbaig/middle-manager#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "rollup": "^2.51.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sinon": "^10.0.0"
+  }
+}
