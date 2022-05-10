@@ -1,12 +1,9 @@
-
-export default class MiddleManager {
+class MiddleManager {
 
     /**
      * @type {Array<Worker>}
      */
     workerPool = [];
-
-    availableWorkerCount = 1;
 
     constructor(workerPoolSize) {
 
@@ -39,18 +36,18 @@ export default class MiddleManager {
 
                 self.postMessage(message.data);
             }
-        `
+        `;
     
         const func = `( () => {
                 ${process.toString()}
-        })();`
+        })();`;
     
         console.log(func);
 
         const workerNode = {
             worker: worker,
             next: workerNode
-        }
+        };
 
         return workerNode;
     
@@ -64,3 +61,15 @@ export default class MiddleManager {
     }
     
 }
+
+const test = new MiddleManager();
+
+const y = function() {console.log("hi");};
+
+test.createWorker(y);
+
+const MIDDLE_MANAGER = {
+    MiddleManager
+};
+
+export { MIDDLE_MANAGER };

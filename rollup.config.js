@@ -20,7 +20,7 @@ const devPlugins = [
 ]
 
 export default {
-    input: 'src/middle-manager.js',
+    input: 'src/index.js',
     output: [{
         file: 'dist/middle-manager.development.esm.js',
         format: 'es'
@@ -34,5 +34,5 @@ export default {
         format: 'es',
         plugins: [terser()]
     }],
-    plugins: isBuild ? buildPlugins : devPlugins;
+    plugins: isBuild ? buildPlugins : devPlugins
 }
